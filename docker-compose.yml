@@ -131,6 +131,12 @@ services:
       POSTGRES_HOSTNAME: postgres
       POSTGRES_PASSWORD: 'ChooseYourOwnPasswordHere1234'
       POSTGRES_USER: guacamole_user
+    # TOTP Configuration
+      TOTP_ENABLED: 'true'
+      TOTP_ISSUER: 'Apache Guacamole'
+      TOTP_DIGITS: 6
+      TOTP_PERIOD: 30
+      TOTP_MODE: sha1
     image: guacamole/guacamole
     links:
     - guacd
